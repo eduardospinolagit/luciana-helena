@@ -74,7 +74,7 @@ h1,h2,h3{font-family:"Plus Jakarta Sans",sans-serif;font-weight:600;line-height:
 .heroi .acoes .pilula{flex:1 1 220px}
 .foto-heroi{position:relative;max-width:520px;width:100%;justify-self:center}
 .foto-heroi .arco{border-radius:260px 260px var(--r) var(--r);overflow:hidden;aspect-ratio:4/4.4;background:var(--rosa)}
-.foto-heroi .arco img{width:100%;height:100%;object-fit:cover;object-position:35% 30%}
+.foto-heroi .arco img{width:100%;height:100%;object-fit:cover;object-position:45% 20%}
 .selo{position:absolute;left:-6px;bottom:22px;background:var(--branco);border-radius:18px;padding:12px 16px;box-shadow:var(--sombra);display:flex;align-items:center;gap:10px;font-size:14px;line-height:1.25}
 .selo .estrelas{display:flex;gap:2px;color:#E0A43A}
 .selo .estrelas svg{width:14px;height:14px}
@@ -111,7 +111,7 @@ section{padding:72px 0}
 .faixa blockquote{font-family:"Plus Jakarta Sans",sans-serif;font-weight:600;font-size:clamp(28px,7.2vw,54px);line-height:1.12;letter-spacing:-.025em;max-width:980px}
 .faixa blockquote span{color:var(--ameixa-f);background:linear-gradient(transparent 60%,rgba(255,255,255,.65) 60%)}
 .faixa cite{display:flex;align-items:center;gap:12px;margin-top:26px;font-style:normal;font-weight:500}
-.faixa cite img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:35% 25%}
+.faixa cite img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:50% 22%}
 .faixa .lista-sinais{margin-top:36px;display:flex;flex-wrap:wrap;gap:8px}
 .faixa .lista-sinais span{background:rgba(255,255,255,.6);border-radius:999px;padding:8px 14px;font-size:14.5px;font-weight:500}
 
@@ -129,11 +129,9 @@ section{padding:72px 0}
 /* treina */
 .treina{background:var(--creme)}
 .treina .grade{display:grid;gap:28px;align-items:center}
-.treina .fotos{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
-.treina .fotos figure{border-radius:22px;overflow:hidden;background:var(--rosa)}
-.treina .fotos figure:first-child{grid-row:span 2}
-.treina .fotos img{width:100%;height:100%;object-fit:cover}
-.treina .fotos .t1 img{object-position:80% 30%}
+.foto-treino{position:relative;border-radius:var(--r);overflow:hidden;background:var(--rosa);aspect-ratio:4/5;max-width:480px;width:100%;justify-self:center}
+.foto-treino img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.foto-treino figcaption{position:absolute;left:14px;bottom:14px;background:var(--creme);border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:700}
 .treina .tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
 .treina .tags span{border:1.5px solid var(--linha);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:500;background:var(--branco)}
 .treina p{font-size:17px;opacity:.9}
@@ -311,7 +309,7 @@ footer.rodape{background:var(--ameixa-f);color:var(--creme);padding:56px 0 36px;
   <symbol id="check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
 </svg>
 
-<div class="aviso"><b>Presencial em Joinville</b><span class="so-desk"> e</span><span class="so-mob"> ·</span> <b>online<span class="so-desk"> para o</span> Brasil e Espanha</b></div>
+<div class="aviso"><b>Presencial em Joinville</b><span class="so-desk"> e</span><span class="so-mob"> ·</span> <b>online<span class="so-desk"> em</span> português e espanhol</b></div>
 
 <header class="cab" id="cab">
   <div class="wrap">
@@ -354,7 +352,7 @@ footer.rodape{background:var(--ameixa-f);color:var(--creme);padding:56px 0 36px;
       </div>
     </div>
     <div class="foto-heroi rv">
-      <div class="arco"><img src="midia/retrato.jpg" alt="Luciana Helena, fisioterapeuta pélvica, sorrindo no consultório" width="640" height="660"></div>
+      <div class="arco"><img src="midia/heroi.jpg" alt="Luciana Helena, fisioterapeuta pélvica, de jaleco rosa segurando um modelo de pelve" width="830" height="735"></div>
       <div class="borboleta-voa" aria-hidden="true"><svg><use href="#borboleta"/></svg></div>
       <div class="selo">
         <b>5,0</b>
@@ -426,7 +424,7 @@ footer.rodape{background:var(--ameixa-f);color:var(--creme);padding:56px 0 36px;
 <div class="faixa">
   <div class="wrap">
     <blockquote class="rv">A cena pode ser engraçada no filme, mas na vida real, <span>escape de urina não é motivo para rir</span>, nem algo que você precisa aceitar.</blockquote>
-    <cite class="rv"><img src="midia/retrato.jpg" alt="" width="46" height="46">Luciana Helena</cite>
+    <cite class="rv"><img src="midia/jaleco.jpg" alt="" width="46" height="46">Luciana Helena</cite>
     <div class="lista-sinais rv" aria-label="Sinais que merecem atenção">
       <span>Escapes ao tossir ou espirrar</span><span>Vontade urgente de ir ao banheiro</span><span>Dor na relação</span><span>Sensação de peso na pelve</span><span>Mudanças depois do parto</span><span>Sintomas da menopausa</span>
     </div>
@@ -463,11 +461,10 @@ footer.rodape{background:var(--ameixa-f);color:var(--creme);padding:56px 0 36px;
 
 <section class="treina">
   <div class="wrap grade">
-    <div class="fotos rv">
-      <figure class="t1"><img src="midia/treino.jpg" alt="Luciana Helena treinando no box de crossfit" width="640" height="490" loading="lazy"></figure>
-      <figure><img src="midia/consultorio.jpg" alt="Atendimento com bola suíça no consultório de paredes rosadas" width="640" height="790" loading="lazy" style="object-position:50% 70%"></figure>
-      <figure><img src="midia/cones.jpg" alt="Luciana mostrando cones vaginais usados no fortalecimento do assoalho pélvico" width="640" height="560" loading="lazy" style="object-position:50% 40%"></figure>
-    </div>
+    <figure class="foto-treino rv">
+      <img src="midia/crossgames.jpg" alt="Luciana Helena no Joinville Cross Games, depois de completar o Murph 2025" width="650" height="1080" loading="lazy">
+      <figcaption>Joinville Cross Games · Murph 2025</figcaption>
+    </figure>
     <div class="rv">
       <h2 style="font-size:clamp(30px,7vw,46px)">Ela não só ensina. Ela vive o que ensina.</h2>
       <div class="tags"><span>Crossfit</span><span>Musculação</span><span>Pilates no reformer</span><span>Mulheres 40+</span></div>
@@ -507,16 +504,16 @@ footer.rodape{background:var(--ameixa-f);color:var(--creme);padding:56px 0 36px;
 <section class="palco">
   <div class="wrap">
     <div class="titulo rv">
-      <h2>Informação que sai da sala e chega em mais mulheres.</h2>
+      <h2>Sempre estudando, para cuidar cada vez melhor.</h2>
     </div>
     <div class="grade">
       <article class="evento rv">
-        <img src="midia/palestra.jpg" alt="Luciana Helena apresentando palestra de Outubro Rosa sobre saúde pélvica" width="640" height="660" loading="lazy">
-        <div class="txt"><span class="data">Outubro Rosa 2026</span><h3>Palestra sobre saúde da pelve</h3><p>Conhecer o próprio corpo e cuidar da pelve também é prevenção e autocuidado.</p></div>
+        <img src="midia/certificado.jpg" alt="Luciana Helena com o certificado do curso Linfotaping Complex" width="1080" height="860" loading="lazy" style="object-position:50% 20%">
+        <div class="txt"><span class="data">Atualização</span><h3>Curso de Linfotaping Complex</h3><p>Com a Dra. Mirella Dias, em Florianópolis. Buscar atualização constante faz parte do compromisso com cada paciente.</p></div>
       </article>
       <article class="evento rv" style="min-height:300px">
-        <img src="midia/evento.jpg" alt="Mulheres reunidas em evento wellness ao ar livre" width="640" height="560" loading="lazy" style="object-position:50% 30%">
-        <div class="txt"><span class="data">Evento wellness</span><h3>Um dia de sol e de movimento</h3><p>Treino, conversa e saúde da mulher fora das quatro paredes.</p></div>
+        <img src="midia/outubro.jpg" alt="Luciana Helena de jaleco rosa no consultório, no Outubro Rosa" width="760" height="950" loading="lazy" style="object-position:50% 8%">
+        <div class="txt"><span class="data">Outubro Rosa</span><h3>Saúde íntima e autoestima</h3><p>Outubro Rosa vai além da prevenção do câncer de mama. Também é cuidar da pelve.</p></div>
       </article>
       <article class="entrevista rv">
         <span class="play"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12-7.5z"/></svg></span>
@@ -538,15 +535,15 @@ footer.rodape{background:var(--ameixa-f);color:var(--creme);padding:56px 0 36px;
         <div class="corpo"><span class="tag">Assoalho pélvico</span><h3>Acontece com você?</h3><p>A saúde do assoalho pélvico merece atenção em todas as idades.</p></div>
       </a>
       <a class="dica rv" href="https://www.instagram.com/lucianah.fisioterapia/" target="_blank" rel="noopener">
-        <div class="img"><img src="midia/cones.jpg" alt="Cones vaginais" width="640" height="560" loading="lazy" style="object-position:50% 45%"></div>
+        <div class="img texto r"><span>Cones vaginais: para que servem?</span></div>
         <div class="corpo"><span class="tag">Fortalecimento</span><h3>Para que servem os cones vaginais</h3><p>Grandes aliados no tratamento, quando indicados corretamente.</p></div>
       </a>
       <a class="dica rv" href="https://www.instagram.com/lucianah.fisioterapia/" target="_blank" rel="noopener">
-        <div class="img texto r"><span>Massagem perineal: conexão, confiança e cuidado.</span></div>
+        <div class="img texto"><span>Massagem perineal: conexão, confiança e cuidado.</span></div>
         <div class="corpo"><span class="tag">Gestação</span><h3>Mais do que uma técnica</h3><p>Um momento de cuidado com o próprio corpo antes do parto.</p></div>
       </a>
       <a class="dica rv" href="https://www.instagram.com/lucianah.fisioterapia/" target="_blank" rel="noopener">
-        <div class="img texto"><span>A perimenopausa pode começar anos antes.</span></div>
+        <div class="img texto r"><span>A perimenopausa pode começar anos antes.</span></div>
         <div class="corpo"><span class="tag">Depois dos 40</span><h3>Nem sempre parece hormonal</h3><p>Os primeiros sinais podem aparecer bem antes da última menstruação.</p></div>
       </a>
     </div>
@@ -574,7 +571,7 @@ footer.rodape{background:var(--ameixa-f);color:var(--creme);padding:56px 0 36px;
         <h3>Online</h3>
         <p>Consultoria e atendimento por vídeo, para quem mora longe de Joinville.</p>
         <ul>
-          <li><svg><use href="#check"/></svg>Para mulheres no Brasil e na Espanha</li>
+          <li><svg><use href="#check"/></svg>Em português e em espanhol</li>
           <li><svg><use href="#check"/></svg>Orientação e acompanhamento a distância</li>
         </ul>
         <a class="pilula branca" data-wa="Olá, Luciana! Quero saber sobre o atendimento online." href="#"><svg><use href="#zap"/></svg>Quero o online</a>
@@ -602,7 +599,7 @@ footer.rodape{background:var(--ameixa-f);color:var(--creme);padding:56px 0 36px;
       </details>
       <details>
         <summary>Dá para fazer online?<span class="mais"><svg><use href="#mais"/></svg></span></summary>
-        <p>Sim. Há consultoria e atendimento online, inclusive para brasileiras que moram na Espanha.</p>
+        <p>Sim. Há consultoria e atendimento online, em português e em espanhol, para quem mora longe de Joinville ou fora do Brasil.</p>
       </details>
       <details>
         <summary>Onde fica o consultório?<span class="mais"><svg><use href="#mais"/></svg></span></summary>
@@ -655,7 +652,7 @@ footer.rodape{background:var(--ameixa-f);color:var(--creme);padding:56px 0 36px;
         <h4>Contato</h4>
         <a data-wa="Olá, Luciana!" href="#">(47) 99927-5413</a>
         <a href="https://www.instagram.com/lucianah.fisioterapia/" target="_blank" rel="noopener">@lucianah.fisioterapia</a>
-        <p>Online para o Brasil e a Espanha</p>
+        <p>Online em português e espanhol</p>
       </div>
     </div>
     <div class="rod-base">
